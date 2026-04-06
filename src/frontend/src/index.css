@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&family=Hind:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@100;200;300;400;500;600;700;800;900&family=Khand:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.16 0.025 240;
+    --foreground: 0.92 0.012 220;
+    --card: 0.18 0.028 235;
+    --card-foreground: 0.92 0.012 220;
+    --popover: 0.2 0.03 238;
+    --popover-foreground: 0.92 0.012 220;
+    --primary: 0.75 0.155 50;
+    --primary-foreground: 0.1 0.01 240;
+    --secondary: 0.22 0.032 235;
+    --secondary-foreground: 0.92 0.012 220;
+    --muted: 0.22 0.032 235;
+    --muted-foreground: 0.62 0.02 220;
+    --accent: 0.75 0.155 50;
+    --accent-foreground: 0.1 0.01 240;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.27 0.035 230;
+    --input: 0.27 0.035 230;
+    --ring: 0.75 0.155 50;
+    --chart-1: 0.75 0.155 50;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.175 0.025 235;
+    --sidebar-foreground: 0.92 0.012 220;
+    --sidebar-primary: 0.75 0.155 50;
+    --sidebar-primary-foreground: 0.1 0.01 240;
+    --sidebar-accent: 0.22 0.032 235;
+    --sidebar-accent-foreground: 0.92 0.012 220;
+    --sidebar-border: 0.27 0.035 230;
+    --sidebar-ring: 0.75 0.155 50;
+  }
+
+  .dark {
+    --background: 0.13 0.025 240;
+    --foreground: 0.92 0.012 220;
+    --card: 0.175 0.028 235;
+    --card-foreground: 0.92 0.012 220;
+    --popover: 0.2 0.03 238;
+    --popover-foreground: 0.92 0.012 220;
+    --primary: 0.75 0.155 50;
+    --primary-foreground: 0.1 0.01 240;
+    --secondary: 0.22 0.032 235;
+    --secondary-foreground: 0.92 0.012 220;
+    --muted: 0.22 0.032 235;
+    --muted-foreground: 0.62 0.02 220;
+    --accent: 0.75 0.155 50;
+    --accent-foreground: 0.1 0.01 240;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 0.27 0.035 230;
+    --input: 0.27 0.035 230;
+    --ring: 0.75 0.155 50;
+    --sidebar: 0.175 0.025 235;
+    --sidebar-foreground: 0.92 0.012 220;
+    --sidebar-primary: 0.75 0.155 50;
+    --sidebar-primary-foreground: 0.1 0.01 240;
+    --sidebar-accent: 0.22 0.032 235;
+    --sidebar-accent-foreground: 0.92 0.012 220;
+    --sidebar-border: 0.27 0.035 230;
+    --sidebar-ring: 0.75 0.155 50;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(
+      135deg,
+      oklch(0.13 0.025 240) 0%,
+      oklch(0.17 0.028 237) 100%
+    );
+    min-height: 100vh;
+    font-family: "Noto Sans Devanagari", "Hind", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.17 0.025 235);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.32 0.04 230);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.75 0.155 50);
+  }
+}
+
+@media print {
+  body > *:not(#print-area) {
+    display: none !important;
+  }
+  #print-area {
+    display: block !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+.letter-editor {
+  outline: none;
+  min-height: 500px;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.letter-editor:focus {
+  outline: none;
+}
